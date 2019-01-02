@@ -1,0 +1,19 @@
+schemaVersion: "2.0.0"
+
+globalEnvVars:
+  - key: "PATH"
+    value: "/env/bin:$PATH"
+
+commandTests:
+
+# check that the aws cli binary is in the correct location
+  - name: "aws cli installation"
+    command: "which"
+    args: ["aws"]
+    expectedOutput: ["/bin/aws\n"]
+
+# check that the aws binary is the correct version
+  - name: "aws version"
+    command: "aws"
+    args: ["--version"]
+    expectedOutput: ["1.16.80"]
