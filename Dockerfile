@@ -11,7 +11,7 @@ RUN apk --no-cache update && \
     apk --no-cache upgrade
 
 RUN apk --no-cache add python py-pip py-setuptools ca-certificates groff less && \
-    pip --no-cache-dir install awscli==${AWS_CLI_VERSION} cfn-lint=={CFN_LINT_VERSION} && \
+    pip --no-cache-dir install awscli==${AWS_CLI_VERSION} cfn-lint==${CFN_LINT_VERSION} && \
     apk del py-pip && \
     rm -rf /var/cache/apk/*
 
