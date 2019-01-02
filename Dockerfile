@@ -17,4 +17,6 @@ RUN apk -v --update add \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
 
+RUN export LD_LIBRARY_PATH=''
+
 ENTRYPOINT ["/bin/packer"]
