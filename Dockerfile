@@ -3,17 +3,11 @@ LABEL maintainers="João Rosa <joaoasrosa@gmail.com>"
 
 ENV AWS_CLI_VERSION=1.16.81
 
-RUN apk update && apk upgrade
+RUN apk --no-cache update && \
+    apk --na-cache upgrade
 
-RUN apk -v --update add \
-        python \
-        py-pip \
-        groff \
-        less \
-        mailcap \
-        && \
-    pip install awscli python-magic && \
-    apk -v --purge del py-pip && \
-    rm /var/cache/apk/*
+RUN apk --no-cache add python py-pip py-setuptools ca-certificates groff less && \
+    pip --no-cache-dir install awscli==${AWS_CLI_VERSION} && \
+    rm -rf /var/cache/apk/*
 
 ENTRYPOINT ["/bin/packer"]
