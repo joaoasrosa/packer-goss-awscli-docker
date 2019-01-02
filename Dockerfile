@@ -18,6 +18,7 @@ RUN apk -v --update add \
     rm /var/cache/apk/*
 
 RUN echo $PYTHONPATH
-RUN export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/lib-dynload/
+ENV PYTHONPATH=/usr/lib/python2.7/lib-dynload/
+RUN echo $PYTHONPATH
 
 ENTRYPOINT ["/bin/packer"]
