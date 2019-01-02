@@ -16,4 +16,4 @@ commandTests:
   - name: "aws version"
     command: "aws"
     args: ["--version"]
-    expectedOutput: ["1.16.81"]
+    expectedOutput: ["*1.16.81*"]
