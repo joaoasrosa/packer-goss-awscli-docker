@@ -16,4 +16,4 @@ commandTests:
   - name: "aws version"
     command: "aws"
     args: ["--version"]
-    expectedOutput: ["aws-cli/1.16.81*"]
+    expectedOutput: ["aws-cli/1.16.81 Python/2.7.15 Linux/4.15.0-1035-azure botocore/1.12.71‌"]
