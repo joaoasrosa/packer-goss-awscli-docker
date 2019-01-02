@@ -1,7 +1,7 @@
 # Introduction
 Docker image with packer, goss provisioner and aws cli. It allows CI servers to use this image, speeding the build and deploy process.
 
-[![Build Status](https://dev.azure.com/joaoasrosa/joaoasrosa/_apis/build/status/joaoasrosa.packer-goss-docker)](https://dev.azure.com/joaoasrosa/joaoasrosa/_build/latest?definitionId=4)
+[![Build Status](https://dev.azure.com/joaoasrosa/joaoasrosa/_apis/build/status/joaoasrosa.packer-goss-awscli-docker)](https://dev.azure.com/joaoasrosa/joaoasrosa/_build/latest?definitionId=6)
 
 For more information about the components:
 - [Packer](https://www.packer.io/)
