@@ -1,15 +1,20 @@
 FROM joaoasrosa/packer-goss:1.3.3
 LABEL maintainers="João Rosa <joaoasrosa@gmail.com>"
 
-ENV AWS_CLI_VERSION=1.16.80
+ENV AWS_CLI_VERSION=1.16.81
+ENV S3CMD_VERSION=2.0.1
 
 RUN apk update && apk upgrade
-RUN apk add --update --no-cache --virtual .build-deps
-RUN apk add make curl openssh
 
-RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
-
-RUN apk -Uuv add groff less python py-pip
-RUN pip install awscli
+RUN apk -v --update add \
+        python \
+        py-pip \
+        groff \
+        less \
+        mailcap \
+        && \
+    pip install awscli==1.16.81 s3cmd python-magic && \
+    apk -v --purge del py-pip && \
+    rm /var/cache/apk/*
 
 ENTRYPOINT ["/bin/packer"]
