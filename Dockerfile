@@ -1,4 +1,4 @@
-FROM joaoasrosa/packer-goss:1.3.3
+FROM alpine:3.8
 LABEL maintainers="João Rosa <joaoasrosa@gmail.com>"
 
 ENV AWS_CLI_VERSION=1.16.81
