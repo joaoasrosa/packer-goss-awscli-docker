@@ -11,9 +11,3 @@ commandTests:
     command: "which"
     args: ["aws"]
     expectedOutput: ["/bin/aws\n"]
-
-# check that the aws binary is the correct version
-  - name: "aws version"
-    command: "aws"
-    args: ["--version"]
-    expectedOutput: ['1.16.81']
