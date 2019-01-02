@@ -11,6 +11,7 @@ RUN apk --no-cache update && \
 
 RUN apk --no-cache add python py-pip py-setuptools ca-certificates groff less && \
     pip --no-cache-dir install awscli==${AWS_CLI_VERSION} && \
+    apk del py-pip && \
     rm -rf /var/cache/apk/*
 
 RUN apk add --update --repository http://dl-cdn.alpinelinux.org/alpine/edge/main git bash wget openssl
