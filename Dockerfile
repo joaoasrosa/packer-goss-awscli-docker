@@ -4,7 +4,7 @@ LABEL maintainers="João Rosa <joaoasrosa@gmail.com>"
 ENV AWS_CLI_VERSION=1.16.81
 
 RUN apk --no-cache update && \
-    apk --na-cache upgrade
+    apk --no-cache upgrade
 
 RUN apk --no-cache add python py-pip py-setuptools ca-certificates groff less && \
     pip --no-cache-dir install awscli==${AWS_CLI_VERSION} && \
