@@ -18,5 +18,6 @@ RUN apk -v --update add \
     rm /var/cache/apk/*
 
 RUN ls -l /usr/lib/python2.7/*/pyexpat*
+RUN export LD_LIBRARY_PATH='/usr/lib/python2.7/lib-dynload/pyexpat.so'
 
 ENTRYPOINT ["/bin/packer"]
