@@ -21,4 +21,8 @@ RUN echo $PYTHONPATH
 ENV PYTHONPATH=/usr/lib/python2.7/lib-dynload/
 RUN echo $PYTHONPATH
 
+RUN echo $LD_LIBRARY_PATH 
+ENV LD_LIBRARY_PATH=''
+RUN echo $LD_LIBRARY_PATH 
+
 ENTRYPOINT ["/bin/packer"]
