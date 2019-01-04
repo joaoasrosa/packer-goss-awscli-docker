@@ -2,6 +2,7 @@ FROM alpine:3.8
 LABEL maintainers="João Rosa <joaoasrosa@gmail.com>"
 
 ENV AWS_CLI_VERSION=1.16.81
+ENV AWS_AMICLEANER_VERSION=0.2.2
 ENV CFN_LINT_VERSION=0.10.2
 ENV PACKER_VERSION=1.3.3
 ENV PACKER_SHA256SUM=efa311336db17c0709d5069509c34c35f0d59c63dfb05f61d4572c5a26b563ea
@@ -11,7 +12,7 @@ RUN apk --no-cache update && \
     apk --no-cache upgrade
 
 RUN apk --no-cache add python py-pip py-setuptools ca-certificates groff less && \
-    pip --no-cache-dir install awscli==${AWS_CLI_VERSION} cfn-lint==${CFN_LINT_VERSION} && \
+    pip --no-cache-dir install awscli==${AWS_CLI_VERSION} cfn-lint==${CFN_LINT_VERSION} aws-amicleaner==${AWS_AMICLEANER_VERSION} && \
     apk del py-pip && \
     rm -rf /var/cache/apk/*
 
