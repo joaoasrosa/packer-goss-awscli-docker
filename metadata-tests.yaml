@@ -11,4 +11,4 @@ metadataTest:
     value: 'efa311336db17c0709d5069509c34c35f0d59c63dfb05f61d4572c5a26b563ea'
   - key: 'PACKER_PROVISIONER_GOSS_VERSION'
     value: '0.3.0'
-  entrypoint: ['/bin/ash/']
+  entrypoint: ['/bin/ash']
