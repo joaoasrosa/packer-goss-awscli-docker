@@ -32,4 +32,4 @@ RUN chmod +x /bin/packer-provisioner-goss
 
 RUN apk add --update --repository http://dl-cdn.alpinelinux.org/alpine/edge/main jq
 
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/bin/ash"]
