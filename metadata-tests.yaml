@@ -1,0 +1,14 @@
+schemaVersion: '2.0.0'
+metadataTest:
+  env:
+  - key: 'AWS_CLI_VERSION'
+    value: '1.16.81'
+  - key: 'CFN_LINT_VERSION'
+    value: '0.10.2'
+  - key: 'PACKER_VERSION'
+    value: '1.3.3'
+  - key: 'PACKER_SHA256SUM'
+    value: 'efa311336db17c0709d5069509c34c35f0d59c63dfb05f61d4572c5a26b563ea'
+  - key: 'PACKER_PROVISIONER_GOSS_VERSION'
+    value: '0.3.0'
+  entrypoint: ['/bin/ash']
