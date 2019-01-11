@@ -11,6 +11,4 @@ metadataTest:
     value: 'efa311336db17c0709d5069509c34c35f0d59c63dfb05f61d4572c5a26b563ea'
   - key: 'PACKER_PROVISIONER_GOSS_VERSION'
     value: '0.3.0'
-  - key: 'PATH'
-    value: '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
-  entrypoint: ['/usr/bin/env']
+  entrypoint: ['/bin/ash']

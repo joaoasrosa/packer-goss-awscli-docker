@@ -6,7 +6,6 @@ ENV CFN_LINT_VERSION=0.10.2
 ENV PACKER_VERSION=1.3.3
 ENV PACKER_SHA256SUM=efa311336db17c0709d5069509c34c35f0d59c63dfb05f61d4572c5a26b563ea
 ENV PACKER_PROVISIONER_GOSS_VERSION=0.3.0
-ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN apk --no-cache update && \
     apk --no-cache upgrade
@@ -33,4 +32,4 @@ RUN chmod +x /bin/packer-provisioner-goss
 
 RUN apk add --update --repository http://dl-cdn.alpinelinux.org/alpine/edge/main jq
 
-ENTRYPOINT ["/usr/bin/env"]
+ENTRYPOINT ["/bin/ash"]
