@@ -12,7 +12,7 @@ RUN apk --no-cache update && \
     apk --no-cache upgrade
 
 RUN apk --no-cache add python py-pip py-setuptools ca-certificates groff less && \
-    pip --no-cache-dir install awscli==${AWS_CLI_VERSION} cfn-lint==${CFN_LINT_VERSION} botocore==1.12.77 && \
+    pip --no-cache-dir install awscli==${AWS_CLI_VERSION} cfn-lint==${CFN_LINT_VERSION} botocore==1.12.77 s3transfer=0.2.0 && \
     apk del py-pip && \
     rm -rf /var/cache/apk/*
 
