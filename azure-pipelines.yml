@@ -3,8 +3,8 @@ pool:
 
 variables:
   imageNameMajor: 'joaoasrosa/packer-goss-awscli:1'
-  imageNameMinor: '$(imageNameMajor).3'
-  imageNamePatch: '$(imageNameMinor).3'
+  imageNameMinor: '$(imageNameMajor).4'
+  imageNamePatch: '$(imageNameMinor).0'
   imageNameBuild: '$(imageNamePatch).$(build.buildId)'
 
 steps:
