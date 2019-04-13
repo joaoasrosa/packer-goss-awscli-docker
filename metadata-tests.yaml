@@ -2,9 +2,9 @@ schemaVersion: '2.0.0'
 metadataTest:
   env:
   - key: 'AWS_CLI_VERSION'
-    value: '1.16.81'
+    value: '1.16.140'
   - key: 'CFN_LINT_VERSION'
-    value: '0.10.2'
+    value: '0.18.1'
   - key: 'PACKER_VERSION'
     value: '1.4.0'
   - key: 'PACKER_SHA256SUM'
