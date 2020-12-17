@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.12.3
 LABEL maintainers="João Rosa <joaoasrosa@gmail.com>"
 
 ENV AWS_CLI_VERSION=1.16.140
